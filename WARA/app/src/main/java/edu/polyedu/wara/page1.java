@@ -31,12 +31,8 @@ public class page1 extends AppCompatActivity {
 
 //        getAppKeyHash();
 
-
-
         Button right = (Button) findViewById(R.id.next);
         Button signup = (Button) findViewById(R.id.signup);
-
-
 
         right.setOnClickListener(new View.OnClickListener() {
 
@@ -57,8 +53,6 @@ public class page1 extends AppCompatActivity {
             }
 
         });
-
-
 
     }
 
