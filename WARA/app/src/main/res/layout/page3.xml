@@ -6,12 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".page3">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/map"
         android:orientation="vertical"
-        android:weightSum="14">
+        android:weightSum="44"
+        android:background="#F0EFEF"
+        >
 
 
         <!--<LinearLayout-->
@@ -60,80 +63,73 @@
 
         <!--</LinearLayout>-->
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="11"
-            android:gravity="left|bottom"
-            android:orientation="vertical"
+            android:layout_weight="40"
+            android:id="@+id/map_view"
             >
 
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textSize="20dp"
-                android:background="@drawable/icon6"
-                />
 
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textSize="20dp"
-                android:background="@drawable/icon5"
-                />
 
-        </LinearLayout>
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:background="@drawable/icon6"
+                    android:layout_gravity="left|center"
+                    />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:background="@drawable/icon5"
+                    android:layout_gravity="bottom"
+                    />
+
+
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
-            android:background="#F0EFEF"
+            android:layout_weight="3"
             android:gravity="center"
             android:orientation="horizontal"
-
             >
 
-            <Button
+            <ImageView
                 android:id="@+id/userplus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:background="@drawable/icon4"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/plus" />
 
-                />
-
-            <Button
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:background="@drawable/icon3"
                 android:onClick="onPopupButtonClick2"
-                />
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/category" />
 
-            <Button
+            <ImageView
                 android:id="@+id/middle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:background="@drawable/icon2"
-                />
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/middlepoint" />
 
-            <Button
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:background="@drawable/icon1"
                 android:onClick="onPopupButtonClick"
-                />
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/share" />
 
         </LinearLayout>
 
@@ -141,8 +137,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="#F0EFEF"
-            android:gravity="center"
+            android:gravity="center|top"
             android:orientation="horizontal"
             >
 
