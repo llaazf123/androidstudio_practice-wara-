@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <item android:id="@+id/Restaurant"
+    <item android:id="@+id/userr1"
         android:icon="@android:drawable/ic_menu_search"
-        android:title="음식점" />
+        android:title="사용자1" />
 
-    <item android:id="@+id/Cafe"
+    <item android:id="@+id/userr2"
         android:icon="@android:drawable/ic_menu_add"
-        android:title="카페" />
+        android:title="사용자2" />
 
-    <item android:id="@+id/Drink"
+    <item android:id="@+id/userr3"
         android:icon="@android:drawable/ic_menu_edit"
-        android:title="술집" />
+        android:title="사용자3" />
 
-    <item android:id="@+id/Conference"
+    <item android:id="@+id/userr4"
         android:icon="@android:drawable/ic_menu_edit"
-        android:title="회의" />
+        android:title="사용자4" />
 
 
-    <item android:id="@+id/Hotel"
+    <item android:id="@+id/userr5"
         android:icon="@android:drawable/ic_menu_edit"
-        android:title="숙박" />
+        android:title="사용자5" />
 
 </menu>

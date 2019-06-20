@@ -38,7 +38,7 @@ public class signup extends Activity {
                     e.printStackTrace();
                 }
                 Intent intent = new Intent(getApplicationContext(),
-                        page2.class);
+                        LoginActivity.class);
                 startActivity(intent);
             }
         });

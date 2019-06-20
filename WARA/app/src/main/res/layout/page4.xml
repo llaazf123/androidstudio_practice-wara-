@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".page4">
+    tools:context=".People">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,6 +25,7 @@
                 android:background="#000000" />
 
             <EditText
+                android:id="@+id/user1"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:hint="사용자 입력"
@@ -39,13 +40,62 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="9">
+            android:weightSum="9"
+            android:gravity="center"
+            >
 
-            <Button
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/search" />
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/search" />
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:text="경기도 용인시 기흥역로 58번길 10"
+                android:textSize="21dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000000" />
+
+            <EditText
+                android:id="@+id/user2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="사용자 입력"
+                android:textSize="23dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="9"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/search" />
 
             <TextView
                 android:layout_width="0dp"
@@ -68,6 +118,7 @@
                 android:background="#000000" />
 
             <EditText
+                android:id="@+id/user3"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:hint="사용자 입력"
@@ -80,13 +131,16 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="9">
+            android:weightSum="9"
+            android:gravity="center"
+            >
 
-            <Button
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/search" />
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/search" />
 
             <TextView
                 android:layout_width="0dp"
@@ -109,47 +163,7 @@
                 android:background="#000000" />
 
             <EditText
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:hint="사용자 입력"
-                android:textSize="23dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="9">
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/search" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:text="경기도 용인시 기흥역로 58번길 10"
-                android:textSize="21dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#000000" />
-
-            <EditText
+                android:id="@+id/user4"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:hint="사용자 입력"
@@ -161,13 +175,16 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="9">
+            android:weightSum="9"
+            android:gravity="center"
+            >
 
-            <Button
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/search" />
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/search" />
 
             <TextView
                 android:layout_width="0dp"
@@ -191,6 +208,7 @@
                 android:background="#000000" />
 
             <EditText
+                android:id="@+id/user5"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:hint="사용자 입력"
@@ -203,13 +221,16 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="9">
+            android:weightSum="9"
+            android:gravity="center"
+            >
 
-            <Button
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/search"/>
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/search" />
 
             <TextView
                 android:layout_width="0dp"

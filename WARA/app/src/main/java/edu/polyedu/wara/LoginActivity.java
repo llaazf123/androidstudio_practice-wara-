@@ -51,7 +51,6 @@ public class LoginActivity extends Activity {
         });
     }
 
-
     class GettingPHP extends AsyncTask<String, Integer, String> {
 
         @Override
@@ -94,7 +93,7 @@ public class LoginActivity extends Activity {
 
                 for (int i = 0; i < results.length(); ++i) {
                     JSONObject temp = results.getJSONObject(i);
-                    userList.add(new AccountList(temp.get("id").toString(), temp.get("pwd").toString()));
+                    userList.add(new AccountList(temp.get("ID").toString(), temp.get("Password").toString()));
                 }
                 EditText idEdit, passEdit;
                 String idStr, passStr;

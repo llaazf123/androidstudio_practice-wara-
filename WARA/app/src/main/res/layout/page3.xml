@@ -73,11 +73,13 @@
 
 
                 <Button
+                    android:id="@+id/People"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:textSize="20dp"
                     android:background="@drawable/icon6"
                     android:layout_gravity="left|center"
+                    android:onClick="onPopupButtonClick3"
                     />
 
                 <Button
@@ -108,26 +110,26 @@
                 app:srcCompat="@drawable/plus" />
 
             <ImageView
+                android:id="@+id/category"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onPopupButtonClick2"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/category" />
 
-            <ImageView
-                android:id="@+id/middle"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/middlepoint" />
+            <!--<ImageView-->
+                <!--android:id="@+id/middle"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:scaleType="fitCenter"-->
+                <!--app:srcCompat="@drawable/middlepoint" />-->
 
             <ImageView
+                android:id="@+id/link"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onPopupButtonClick"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/share" />
 
@@ -157,13 +159,13 @@
                 android:gravity="center"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="중간지점 찾기"
-                android:layout_weight="1"
-                android:gravity="center"
-                />
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="중간지점 찾기"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--/>-->
 
             <TextView
                 android:layout_width="wrap_content"

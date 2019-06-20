@@ -31,9 +31,9 @@
 
 
                 <ImageView
+                    android:id="@+id/picture"
                     android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/restaurant" />
+                    android:layout_height="60dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -44,15 +44,15 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/restaurant"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="라하노카레"
                     android:textSize="25dp" />
 
                 <TextView
+                    android:id="@+id/address"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="경기도 성남시 서현동 247-7" />
+                    android:layout_height="wrap_content"/>
 
 
             </LinearLayout>
@@ -106,26 +106,26 @@
                 app:srcCompat="@drawable/plus" />
 
             <ImageView
+                android:id="@+id/categoryy"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onPopupButtonClick2"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/category" />
 
-            <ImageView
-                android:id="@+id/middle"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/middlepoint" />
+            <!--<ImageView-->
+                <!--android:id="@+id/middle"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:scaleType="fitCenter"-->
+                <!--app:srcCompat="@drawable/middlepoint" />-->
 
             <ImageView
+                android:id="@+id/linkk"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onPopupButtonClick"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/share" />
 
@@ -155,13 +155,13 @@
                 android:gravity="center"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="중간지점 찾기"
-                android:layout_weight="1"
-                android:gravity="center"
-                />
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="중간지점 찾기"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--/>-->
 
             <TextView
                 android:layout_width="wrap_content"
