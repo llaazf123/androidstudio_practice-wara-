@@ -55,10 +55,10 @@
                 android:layout_weight="1"
                 android:gravity="right|center">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지도로 보기" />
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="지도로 보기" />-->
 
             </LinearLayout>
 
@@ -339,10 +339,10 @@
                 android:layout_height="2dp"
                 android:background="#000000" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="더보기" />
+            <!--<Button-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="더보기" />-->
 
         </LinearLayout>
 

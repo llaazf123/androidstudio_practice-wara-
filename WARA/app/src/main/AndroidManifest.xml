@@ -16,7 +16,7 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="be85736ef58881ef25040e643435bb6b"/>
+            android:value="7146101377365567166988fd47fe7c2b"/>
 
 
         <activity android:name=".page1">

@@ -248,16 +248,16 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#000000" />
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="2dp"-->
+                <!--android:background="#000000" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="사용자를 추가할 수 있습니다."
-                android:textSize="30dp" />
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="사용자를 추가할 수 있습니다."-->
+                <!--android:textSize="30dp" />-->
 
             <View
                 android:layout_width="match_parent"
@@ -292,7 +292,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="#BB8FBE"
+                android:background="#FFD3B6"
                 android:text="완료" />
 
 
