@@ -38,7 +38,7 @@ public class page1 extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),
-                        LoginActivity.class);
+                        page2.class);
                 startActivity(intent);
             }
 

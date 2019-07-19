@@ -1,46 +1,46 @@
 package edu.polyedu.wara;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
-import net.daum.mf.map.api.MapView;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class page3 extends AppCompatActivity {
+//참고 : https://mailmail.tistory.com/17
+public class google extends AppCompatActivity implements OnMapReadyCallback {
     final String[] userStr = new String[5];
+    //구글맵참조변수
+    GoogleMap mMap;
 
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.page3);
+        setContentView(R.layout.google);
+
+        // SupportMapFragment을 통해 레이아웃에 만든 fragment의 ID를 참조하고 구글맵을 호출한다.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this); //getMapAsync must be called on the main thread.
 
         ImageView btnDialog = (ImageView) findViewById(R.id.category);
+
         final List<String> selectedItems = new ArrayList<String>();
 
         ImageView btnDialog2 = (ImageView) findViewById(R.id.link);
-
-        MapView mapView = new MapView(this);
-        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
-        mapViewContainer.addView(mapView);
-
-
         ImageView userplus = (ImageView) findViewById(R.id.userplus);
-        ImageView middle = (ImageView) findViewById(R.id.middle);
+//        ImageView middle = (ImageView) findViewById(R.id.middle);
 
         userplus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,8 +50,6 @@ public class page3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
 
         Intent intent = getIntent();
 
@@ -71,7 +69,7 @@ public class page3 extends AppCompatActivity {
                 final Intent intent = new Intent(getApplicationContext(), shoplist.class);
                 final String[] items = new String[]{"음식점", "카페", "술집", "숙박시설"};
 
-                AlertDialog.Builder dialog = new AlertDialog.Builder(page3.this);
+                AlertDialog.Builder dialog = new AlertDialog.Builder(google.this);
                 dialog.setTitle("카테고리를 선택하세요")
                         .setMultiChoiceItems(items
                                 , new boolean[]{false, false, false, false}
@@ -80,7 +78,7 @@ public class page3 extends AppCompatActivity {
                                     public void onClick(DialogInterface dialog, int which, boolean isChecked) {
 
                                         if (isChecked) {
-                                            Toast.makeText(page3.this, items[which], Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(google.this, items[which], Toast.LENGTH_SHORT).show();
                                             selectedItems.add(items[which]
 
                                             );
@@ -93,7 +91,7 @@ public class page3 extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 if (selectedItems.size() == 0) {
-                                    Toast.makeText(page3.this, "선택된 카테고리가 없습니다", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(google.this, "선택된 카테고리가 없습니다", Toast.LENGTH_SHORT).show();
                                 } else {
 
                                     String items = "";
@@ -121,7 +119,7 @@ public class page3 extends AppCompatActivity {
                                     selectedItems.clear();
 
                                     items = items.substring(0, items.length() - 2);
-                                    Toast.makeText(page3.this, items, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(google.this, items, Toast.LENGTH_SHORT).show();
 
                                 }
                             }
@@ -137,7 +135,7 @@ public class page3 extends AppCompatActivity {
 
                 final String[] items = new String[]{"Facebook", "Instagram", "Line", "Kakaotalk"};
 
-                AlertDialog.Builder dialog = new AlertDialog.Builder(page3.this);
+                AlertDialog.Builder dialog = new AlertDialog.Builder(google.this);
                 dialog.setTitle("링크 공유를 원하는 SNS를 선택하세요")
                         .setMultiChoiceItems(items
                                 , new boolean[]{false, false, false, false}
@@ -145,7 +143,7 @@ public class page3 extends AppCompatActivity {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which, boolean isChecked) {
                                         if (isChecked) {
-                                            Toast.makeText(page3.this, items[which], Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(google.this, items[which], Toast.LENGTH_SHORT).show();
                                             selectedItems.add(items[which]);
                                         } else {
                                             selectedItems.remove(items[which]);
@@ -156,7 +154,7 @@ public class page3 extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 if (selectedItems.size() == 0) {
-                                    Toast.makeText(page3.this, "선택된 SNS가 없습니다", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(google.this, "선택된 SNS가 없습니다", Toast.LENGTH_SHORT).show();
                                 } else {
 
                                     String items = "";
@@ -167,7 +165,7 @@ public class page3 extends AppCompatActivity {
                                     selectedItems.clear();
 
                                     items = items.substring(0, items.length() - 2);
-                                    Toast.makeText(page3.this, items, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(google.this, items, Toast.LENGTH_SHORT).show();
 
                                 }
                             }
@@ -181,6 +179,12 @@ public class page3 extends AppCompatActivity {
 
     }
 
+    @Override //구글맵을 띄울준비가 됬으면 자동호출된다.
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        //지도타입 - 일반
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+    }
     public void onPopupButtonClick3(View view) {
         if (userStr[0] == null) {
             //아무것도 안해
@@ -193,67 +197,4 @@ public class page3 extends AppCompatActivity {
             popup3.show();
         }
     }
-
-//    public void onPopupButtonClick(View view2) {
-//        //PopupMenu 객체 생성.
-//        PopupMenu popup = new PopupMenu(this, view2);
-//
-//        //설정한 popup XML을 inflate.
-//        popup.getMenuInflater().inflate(R.menu.popup, popup.getMenu());
-//
-//        //팝업메뉴 클릭 시 이벤트
-//        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-//            public boolean onMenuItemClick(MenuItem item) {
-//                switch (item.getItemId()) {
-//                    case R.id.Facebook:
-//                        break;
-//
-//                    case R.id.Instagram:
-//                        break;
-//
-//                    case R.id.Line:
-//                        break;
-//
-//                    case R.id.Kakaotalk:
-//                        break;
-//                }
-//                return true;
-//            }
-//        });
-//        popup.show();
-//    }
-//
-//    public void onPopupButtonClick2(View view3) {
-//        //PopupMenu 객체 생성.
-//        PopupMenu popup2 = new PopupMenu(this, view3);
-//
-//        //설정한 popup XML을 inflate.
-//        popup2.getMenuInflater().inflate(R.menu.popup2, popup2.getMenu());
-//
-//        //팝업메뉴 클릭 시 이벤트
-//        popup2.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-//            public boolean onMenuItemClick(MenuItem item) {
-//                switch (item.getItemId()) {
-//                    case R.id.Restaurant:
-//                        break;
-//
-//                    case R.id.Cafe:
-//                        break;
-//
-//                    case R.id.Drink:
-//                        break;
-//
-//                    case R.id.Conference:
-//                        break;
-//
-//                    case R.id.Hotel:
-//                        break;
-//                }
-//                return true;
-//            }
-//        });
-//        popup2.show();
-//    }
-
-
 }

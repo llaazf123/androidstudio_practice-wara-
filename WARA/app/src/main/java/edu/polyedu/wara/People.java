@@ -1,6 +1,5 @@
 package edu.polyedu.wara;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +26,7 @@ public class People extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),
-                        page3.class);
+                        daum.class);
 
                 String user1Str, user2Str, user3Str, user4Str, user5Str;
                 EditText user1, user2, user3, user4, user5;

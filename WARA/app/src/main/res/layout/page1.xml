@@ -34,10 +34,6 @@
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/logo" />
 
-
-
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -68,7 +64,6 @@
                 android:textSize="20dp" />
 
         </LinearLayout>
-
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -106,7 +106,7 @@ public class LoginActivity extends Activity {
                     if(idStr.equals(user.getAccountId()) && passStr.equals(user.getAccountPw())) idCheck = true;
                 }
                 if(idCheck == true){
-                    Intent intent = new Intent(getApplicationContext(), page3.class);
+                    Intent intent = new Intent(getApplicationContext(), daum.class);
                     intent.putExtra("inputId", idStr);
                     intent.putExtra("inputPassword", passStr);
                     idCheck = false;
